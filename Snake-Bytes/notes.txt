@@ -3,4 +3,4 @@ step-2 add assets
 step-3 
     - create one main div(main-container) and three div inside (main-container) div named (scoreBox, maxScoreBox, board) with (scoreBox) having the current score = 0 and (maxScoreBox) having max score which will be stored in local storage of the user 
     - HTML part done here 
-step-4 
+step-4
