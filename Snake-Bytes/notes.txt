@@ -17,4 +17,13 @@ step-6 divide the whole js into three sections variable, functions and main-logi
     moveSound
     musicSound
 
-step-7 
+step-7 now we use the window.requestAnimationFrame(takesCallbackFunction)
+    in function section we first create one then call it main by passing this
+    function as callback function to requestAnimationFrame and we call that function
+    in it again so that it is being called recurssively 
+    function main(ctime){ function creation
+    window.requestAnimationFrame(main); recurssively calling itself
+    }   
+    window.requestAnimationFrame(main); calling main function for first time
+
+step-8

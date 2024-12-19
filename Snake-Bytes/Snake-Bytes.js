@@ -7,6 +7,9 @@ const musicSound=new Audio("./Assets/sounds/music.mp3");
 
 
 //functions
-
+function main(ctime){
+    window.requestAnimationFrame(main);
+}
 
 //main logic
+window.requestAnimationFrame(main);
