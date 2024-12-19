@@ -3,8 +3,18 @@ step-2 add assets
 step-3 
     - create one main div(main-container) and three div inside (main-container) div named (scoreBox, maxScoreBox, board) with (scoreBox) having the current score = 0 and (maxScoreBox) having max score which will be stored in local storage of the user 
     - HTML part done here 
-step-4 import font of your choice for score board and set universal padding and margin to 0
+
+step-4 import font of your choice for score board and set universal padding and margin  to 0
+
 step-5 create css for class main-container and board 
     main-container : background as image ,height and width, display will be flex,  justify-content will be center
     board: add background as linear graident, height and width and border, display as grid, template rows as grid-template-rows: repeat(18,1fr), same way for columns ** remeber first is number of so it will be 18 not 18fr 
-step-6 
+
+step-6 divide the whole js into three sections variable, functions and main-logic-section using comments and create 4 sound variables and one variable for object having x property with value 0 and y property as value 0
+    direction
+    foodSound 
+    gameOverSound
+    moveSound
+    musicSound
+
+step-7 
