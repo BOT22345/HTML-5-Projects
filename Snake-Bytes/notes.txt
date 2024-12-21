@@ -26,4 +26,10 @@ step-7 now we use the window.requestAnimationFrame(takesCallbackFunction)
     }   
     window.requestAnimationFrame(main); calling main function for first time
 
-step-8
+step-8 now use this formula to control the frame  rates or speed of the game 
+    create two varaibles lastPaintTime=0 to update the variable in accordance with c time and speed to control the speed=2 of the game 
+    if((ctime-lastPaintTime)/1000<1/speed){return;}else{gameEngine();}
+    lastPaintTime=ctime; // to keep our loop running recurssively
+    for example ctime=100 and intially last time =0 we will get 0.1which is less 1/2 0.5 so it is gonna get return and won't re paint but once c time increases to 501 it will give 0.51 something so it is gonna enter the else part and call the game engine and later gonna update lastPaintTime to cTime so our loop keeps on running and gameEngine is called consistently after some time 
+
+Step-9 
