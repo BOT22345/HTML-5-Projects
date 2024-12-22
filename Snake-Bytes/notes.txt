@@ -32,4 +32,15 @@ step-8 now use this formula to control the frame  rates or speed of the game
     lastPaintTime=ctime; // to keep our loop running recurssively
     for example ctime=100 and intially last time =0 we will get 0.1which is less 1/2 0.5 so it is gonna get return and won't re paint but once c time increases to 501 it will give 0.51 something so it is gonna enter the else part and call the game engine and later gonna update lastPaintTime to cTime so our loop keeps on running and gameEngine is called consistently after some time 
 
-Step-9 
+Step-9 creat a gameEngine(){} function after this main function and divide it into two sections using comment part 1 update snake array and food and part 2 display snake array ana food and create a variable array snakeArr and having a one object in that array as propert x and y showing initial position of snake 
+
+Step-10 now we try to display our snake 
+    first get the board from html using querySelector let board = document.querySelector(".board");
+    now first make the boardinnerHtml to empty string so that we can later fill it with snake board.innerHTML="";
+    now we put a for loop on our snakeArray snakeArr.forEach((e,index)=>{e is the elementlike {x:10,y:13},{x:11,y:13}}.. and so on while the index is the number of elemtent in that array)
+    now we create an particular element or div which we will append later on the board    snakeElement=document.createElement('div');
+    now we set the position of the div using the Snakearray snake Element.style.gridRowStart=e.y; snakeElement.style.gridColumnStart=e.x;
+    now we will add one css to this element and set its css in css file snakeElement.classList.add('food'); and in css file .food{ background-color: red;}
+    now we append this to the board array board.appendChild(snakeElement);
+
+Step-11
