@@ -10,6 +10,7 @@ let lastPaintTime=0;
 let snakeArr=[
     {x:13,y:15},
 ];
+let food={x:15,y:7};
 
 //functions
 function main(ctime){
@@ -26,14 +27,27 @@ function gameEngine(){
     // Part 1: Updating the snake array and food 
 
     //Part 2" Display the snake array and food
+    //Display snake
     board.innerHTML="";
     snakeArr.forEach((e,index)=>{
         snakeElement=document.createElement('div');
         snakeElement.style.gridRowStart=e.y;
         snakeElement.style.gridColumnStart=e.x;
-        snakeElement.classList.add('food');
+        if(index===0){
+            snakeElement.classList.add('snakeHead');
+        }
+        else{
+            snakeElement.classList.add('snakeBody');
+        }
         board.appendChild(snakeElement);
     })
+    //Display food
+    console.log(food.y);
+    foodElement=document.createElement('div');
+    foodElement.style.gridRowStart=food.y;
+    foodElement.style.gridColumnStart=food.x;
+    foodElement.classList.add('food');
+    board.appendChild(foodElement);
 }
 
 //main logic

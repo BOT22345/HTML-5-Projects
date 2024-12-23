@@ -43,4 +43,13 @@ Step-10 now we try to display our snake
     now we will add one css to this element and set its css in css file snakeElement.classList.add('food'); and in css file .food{ background-color: red;}
     now we append this to the board array board.appendChild(snakeElement);
 
-Step-11
+Step-11 now we will try to display the food using same concept and create the seperate classes for the snake head and snake body 
+    first create a copy of inside 5 lines of earlier for each loop on snakeArr to display a single food 
+    now change the snakeElement to foodElement
+    now create a object names foodElement and add values of x and y property Note that it is a object not array 
+    create the css class in css file and add background color 
+    now create a seperate class for snakebody and snake head with different colors 
+    now for the logic of head to be different body put a if loop if index===0 put this head class using classList.add or else the snakeBody class will be added 
+    remeber to keep the food and foodElement different names or else issue will occur 
+
+Step-12

@@ -26,3 +26,10 @@
 .food{
     background-color: red;
 }
+
+.snakeHead{
+    background-color:orange;
+}
+.snakeBody{
+    background-color:pink;
+}
