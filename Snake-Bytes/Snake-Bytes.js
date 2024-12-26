@@ -42,7 +42,7 @@ function gameEngine(){
         board.appendChild(snakeElement);
     })
     //Display food
-    console.log(food.y);
+    // console.log(food.y);
     foodElement=document.createElement('div');
     foodElement.style.gridRowStart=food.y;
     foodElement.style.gridColumnStart=food.x;
@@ -52,3 +52,21 @@ function gameEngine(){
 
 //main logic
 window.requestAnimationFrame(main);
+window.addEventListener('keydown',(e)=>{
+    inputDir={x:0,y:0};
+    moveSound.play();
+    switch(e.key){
+        case "ArrowUp":
+            console.log("up pressed");
+            break;
+        case "ArrowDown":
+            console.log("down pressed");
+            break;
+        case "ArrowLeft":
+            console.log("left pressed");
+            break;
+        case "ArrowRight":
+            console.log("right pressed");
+            break;
+    }
+})

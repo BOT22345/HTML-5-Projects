@@ -52,4 +52,9 @@ Step-11 now we will try to display the food using same concept and create the se
     now for the logic of head to be different body put a if loop if index===0 put this head class using classList.add or else the snakeBody class will be added 
     remeber to keep the food and foodElement different names or else issue will occur 
 
-Step-12
+Step-12 now create one keydown event listener on the window obejct and inside it 
+    creat one inputDir object with x:0 and y:0
+    also make movement sound play using moveSound.play();
+    now use the e.key to get the key pressed by the user and check using switch condition and print on console for testing purpose 
+    switch(e.key){case "ArrowUp":}
+Step-13
