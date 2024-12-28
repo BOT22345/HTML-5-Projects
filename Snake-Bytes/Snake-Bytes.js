@@ -1,5 +1,5 @@
 //varialbes
-let direction ={x:0,y:0};
+let inputDir ={x:0,y:0};
 const foodSound =new Audio("./Assets/sounds/food.mp3");
 const gameOverSound=new Audio("./Assets/sounds/gameOver.mp3");
 const moveSound=new Audio("./Assets/sounds/move.mp3");
@@ -57,15 +57,23 @@ window.addEventListener('keydown',(e)=>{
     moveSound.play();
     switch(e.key){
         case "ArrowUp":
+            inputDir.x=0;
+            inputDir.y=-1;
             console.log("up pressed");
             break;
-        case "ArrowDown":
+            case "ArrowDown":
+            inputDir.x=0;
+            inputDir.y=1;
             console.log("down pressed");
             break;
-        case "ArrowLeft":
+            case "ArrowLeft":
+            inputDir.x=-1;
+            inputDir.y=0;
             console.log("left pressed");
             break;
-        case "ArrowRight":
+            case "ArrowRight":
+            inputDir.x=1;
+            inputDir.y=0;
             console.log("right pressed");
             break;
     }

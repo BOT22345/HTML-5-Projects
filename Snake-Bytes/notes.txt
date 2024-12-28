@@ -11,7 +11,7 @@ step-5 create css for class main-container and board
     board: add background as linear graident, height and width and border, display as grid, template rows as grid-template-rows: repeat(18,1fr), same way for columns ** remeber first is number of so it will be 18 not 18fr 
 
 step-6 divide the whole js into three sections variable, functions and main-logic-section using comments and create 4 sound variables and one variable for object having x property with value 0 and y property as value 0
-    direction
+    inputDir
     foodSound 
     gameOverSound
     moveSound
@@ -57,4 +57,7 @@ Step-12 now create one keydown event listener on the window obejct and inside it
     also make movement sound play using moveSound.play();
     now use the e.key to get the key pressed by the user and check using switch condition and print on console for testing purpose 
     switch(e.key){case "ArrowUp":}
-Step-13
+
+Step-13 now set the value of inputDir object in switch cases, like for ArrowUp case and ArrowDown case x will remain 0 but will y will be -1 and 1 respectively and same arrow right and left y remain 0 and x will be -1 and 1 respectively
+
+Step-14
