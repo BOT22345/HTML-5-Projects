@@ -60,4 +60,13 @@ Step-12 now create one keydown event listener on the window obejct and inside it
 
 Step-13 now set the value of inputDir object in switch cases, like for ArrowUp case and ArrowDown case x will remain 0 but will y will be -1 and 1 respectively and same arrow right and left y remain 0 and x will be -1 and 1 respectively
 
-Step-14
+Step-14 now we write the logic for food connecting with snake head and updating snake and moving food to random location 
+    first we write the logic for increasing the snakebody size 
+    if snakeArr.x value === food.x value and same way for snakeArr.y 
+    snakeArr.unshift({x:snakeArr[0]+inputDir.x,y:snakeArr[0].y+inputDir.y }); this will update the snake body 
+    now for the food random location we use the math.random and math.round for integer value as math.random give float value 
+    let a=1
+    let b=18
+    food={x:Math.round(a+(b-a)*Math.random()),y:Math.round(a+(b-a)*Math.random())} here a is highest value of our grid and b is lowest value of our grid so our value will be generated between a and b 
+
+Step-15 now we write the logic if snake collide with border 

@@ -26,6 +26,14 @@ function main(ctime){
 function gameEngine(){
     // Part 1: Updating the snake array and food 
 
+    // updating food on snake connecting with food 
+    if(snakeArr[0].x===food.x || snakeArr[0].y===food.y){
+        snakeArr.unshift({x:snakeArr[0]+inputDir.x,y:snakeArr[0].y+inputDir.y });
+        let a=1
+        let b=18
+        food={x:Math.round(a+(b-a)*Math.random()),y:Math.round(a+(b-a)*Math.random())}
+    }
+
     //Part 2" Display the snake array and food
     //Display snake
     board.innerHTML="";
