@@ -5,7 +5,7 @@ const gameOverSound=new Audio("./Assets/sounds/gameOver.mp3");
 const moveSound=new Audio("./Assets/sounds/move.mp3");
 const musicSound=new Audio("./Assets/sounds/music.mp3");
 let board = document.querySelector(".board");
-let speed=2;
+let speed=3;
 let lastPaintTime=0;
 let snakeArr=[
     {x:13,y:15},
@@ -27,8 +27,8 @@ function gameEngine(){
     // Part 1: Updating the snake array and food 
 
     // updating food on snake connecting with food 
-    if(snakeArr[0].x===food.x || snakeArr[0].y===food.y){
-        snakeArr.unshift({x:snakeArr[0]+inputDir.x,y:snakeArr[0].y+inputDir.y });
+    if(snakeArr[0].x===food.x && snakeArr[0].y===food.y){
+        snakeArr.unshift({x:snakeArr[0].x+inputDir.x,y:snakeArr[0].y+inputDir.y });
         let a=1
         let b=18
         food={x:Math.round(a+(b-a)*Math.random()),y:Math.round(a+(b-a)*Math.random())}
@@ -49,6 +49,15 @@ function gameEngine(){
         }
         board.appendChild(snakeElement);
     })
+
+    //snake movement
+    for(let i=snakeArr.length-2;i>=0;i--){
+        snakeArr[i+1]={...snakeArr[i]}
+    }
+    snakeArr[0].x=snakeArr[0].x+inputDir.x;
+    snakeArr[0].y=snakeArr[0].y+inputDir.y;
+
+
     //Display food
     // console.log(food.y);
     foodElement=document.createElement('div');

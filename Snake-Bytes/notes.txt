@@ -69,4 +69,11 @@ Step-14 now we write the logic for food connecting with snake head and updating 
     let b=18
     food={x:Math.round(a+(b-a)*Math.random()),y:Math.round(a+(b-a)*Math.random())} here a is highest value of our grid and b is lowest value of our grid so our value will be generated between a and b 
 
-Step-15 now we write the logic if snake collide with border 
+Step-15 now we will write the logic for snake movement 
+    now after the snake display we will start a decrementing for loop starting from legnth of array -2 going till 0 
+    for(let i=snakeArr.legnth;i>=0;i--)
+    and inside this loop we will just shift every object to its next position snakeArr[i+1]={...snakeArr[i]}, we are using spread operator, cause a variable pointing to the object only holds the reference to that value not the actual value inside, so assiging it straight to another will only pass the reference not the actual value inside the object, so we are using spread operator to get the actual value inside the object and then assign it to the next position of the array but the last position that is at index 0 will be having an issue so we have to treat it spreately 
+    snakeArr[0].x=snakeArr[0].x+inputDir.x;
+    snakeArr[0].y=snakeArr[0].y+inputDir.y;
+
+Step-16 
