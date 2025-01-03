@@ -46,6 +46,10 @@ function gameEngine(){
         for(let i=1;i<snake.length;i++){
             if(snake[0].x===snake[i].x && snake[0].y===snake[i].y){
                 gameOverSound.play();
+                if(score>maxScore){
+                    maxScore=score;
+                    localStorage.setItem("maxScore",maxScore);
+                }
                 return true;
             }
         }
