@@ -76,4 +76,23 @@ Step-15 now we will write the logic for snake movement
     snakeArr[0].x=snakeArr[0].x+inputDir.x;
     snakeArr[0].y=snakeArr[0].y+inputDir.y;
 
-Step-16 
+Step-16 now we are gonna write the logic for colliding of snake 
+    first we write the logic if we call the isCollide function what will happen and then later write the inside logic of that isCollide function which is gonna return true if collided
+    if(isCollide(snakeArr)){} the isCollide function is gonna get passed one array i.e., snake array 
+    inside these curly bracket first we stop the music sound
+    now we set inputDirection object to x:0 and y:0 and set an alert gameover 
+    also reset the score to 0 and make snakeArr array object to again holding only one object snakeArr=[{x:15,y:3}]
+
+Step-17 now we will write the logic inside the isCollide function 
+    first for if snake bumps into itself 
+    we will gonna write function definition below this ifCollide calling
+    inside this fucntion we will start the loop from 1 to snakeArr.length cause 0 will be and we need to check 0th element with all other elements 
+    for(let i=1;i<snakeArr.length;i++){}
+    now insde this for loop we will check if coordinates of 0th elemtent x and y both matches with snakeArr element at same time, if they does we will return true 
+    if(snakeArr[0].x===snakeArr[i].x && snakeArr[0].y===snakeArr[i].y){gameOverSound.play(); return true}, and before returning true we will also play the gameoversound cause in calling if playing the gameover sound it is playing after the alert message 
+    
+    now for if snake bumb to border 
+    now outside this for loop cause we only need to check this once not like again and again like head with body 
+    we will start one if loop and inside it we are gonna check if head is between 18-0 which is our border
+    if(snake[0].x>18 || snake[0].x<0  || snake[0].y>18 || snake[0].y<0){return true;} we are only using or operator cause if it hits with any wall it should collid
+
