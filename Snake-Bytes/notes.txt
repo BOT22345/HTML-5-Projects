@@ -102,3 +102,14 @@ Step-18 now we write the logic for score
     now in the area we are changing the for to random location when it matches with the cord of the head, we change the inner value of the scoreBox using the template literal and also increment the score 
 
 Step-19 logic for highest score 
+    first in cess we are going to set the css for the maxScoreBox class named dive and set its position 
+    now in javascript create a variable for maxScoreBox which is gonna get reference of the maxScoreBox div in html and maxScore which is gonna hold the maxScore 
+    now first get the value of maxScore from the local storage by using maxScore=localStorage.getItem();
+    now in the code for isCollid function in the wall coliding if or second if, write the logic if(score>maxScore){maxScore=score and set it to the local storage usig localStorage.setItem("maxScore",maxScore);}
+    now in main function just change the inner html of the maxScoreBoard, we need to do outside this if block cause we wan't it to render as soon as our gameloop starts 
+
+Step-20 setting different images for food snaek body and head 
+    just in the css of the files change the background images 
+--------------------------------------ALL DONE!!!!!! -------------------------
+--------------------------------------REST ALL YOUR IMAGINATION --------------
+

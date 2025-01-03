@@ -13,6 +13,8 @@ let snakeArr=[
 let food={x:15,y:7};
 let scoreBox=document.querySelector(".scoreBox");
 let score=0;
+let maxScore=localStorage.getItem("maxScore");
+let maxScoreBoard=document.querySelector(".maxScoreBox");
 
 //functions
 function main(ctime){
@@ -38,6 +40,7 @@ function gameEngine(){
         score=0;
         
     }
+    maxScoreBoard.innerHTML=`Highest score : ${maxScore}`;
     
     function isCollide(snake){
         for(let i=1;i<snake.length;i++){
@@ -48,6 +51,12 @@ function gameEngine(){
         }
         if(snake[0].x>18 || snake[0].x<0  || snake[0].y>18 || snake[0].y<0){
             gameOverSound.play();
+            if(score>maxScore){
+                maxScore=score;
+                localStorage.setItem("maxScore",maxScore);
+            }
+            
+
             return true;
         }
     }
