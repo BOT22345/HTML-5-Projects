@@ -96,3 +96,9 @@ Step-17 now we will write the logic inside the isCollide function
     we will start one if loop and inside it we are gonna check if head is between 18-0 which is our border
     if(snake[0].x>18 || snake[0].x<0  || snake[0].y>18 || snake[0].y<0){return true;} we are only using or operator cause if it hits with any wall it should collid
 
+Step-18 now we write the logic for score 
+    first in css we are going to set the css for the scoreBox class named div and set its position 
+    now in javascript we will get the reference of the element in scoreBox in javascript file 
+    now in the area we are changing the for to random location when it matches with the cord of the head, we change the inner value of the scoreBox using the template literal and also increment the score 
+
+Step-19 logic for highest score 

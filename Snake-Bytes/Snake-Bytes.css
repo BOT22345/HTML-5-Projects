@@ -33,3 +33,17 @@
 .snakeBody{
     background-color:pink;
 }
+
+.scoreBox{
+    height:40px;
+    width:200px;
+    position:absolute;
+    left:75vw;
+    top:20vh;
+    color:white;
+    font-size:30px; 
+    border:2px solid white;
+    border-radius:20px;
+    padding:20px;
+    padding-top:20px;
+}

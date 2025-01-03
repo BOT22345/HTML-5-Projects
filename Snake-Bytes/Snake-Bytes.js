@@ -11,6 +11,7 @@ let snakeArr=[
     {x:13,y:15},
 ];
 let food={x:15,y:7};
+let scoreBox=document.querySelector(".scoreBox");
 let score=0;
 
 //functions
@@ -53,6 +54,8 @@ function gameEngine(){
 
     // updating food on snake connecting with food 
     if(snakeArr[0].x===food.x && snakeArr[0].y===food.y){
+        score++;
+        scoreBox.innerHTML=`Score : ${score}`;
         snakeArr.unshift({x:snakeArr[0].x+inputDir.x,y:snakeArr[0].y+inputDir.y });
         let a=1
         let b=18
