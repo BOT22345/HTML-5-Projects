@@ -108,8 +108,9 @@ Step-19 logic for highest score
     now in the code for isCollid function in the wall coliding if or second if, write the logic if(score>maxScore){maxScore=score and set it to the local storage usig localStorage.setItem("maxScore",maxScore);}
     now in main function just change the inner html of the maxScoreBoard, we need to do outside this if block cause we wan't it to render as soon as our gameloop starts 
 
-Step-20 setting different images for food snaek body and head 
+Step-20 setting different images for food snaek body and head and rotate head with arrow direction 
     just in the css of the files change the background images 
+    in js inside where we create the snake element we will just check the inputDir.x and inputDir.y and rotate the head accordinly, it is working this way but if try to change in switch it reaches back to its location because it is gonna body.apped the new elemnt to the body 
 --------------------------------------ALL DONE!!!!!! -------------------------
 --------------------------------------REST ALL YOUR IMAGINATION --------------
 

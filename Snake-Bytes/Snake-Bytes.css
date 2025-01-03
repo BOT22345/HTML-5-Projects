@@ -24,14 +24,23 @@
 }
 
 .food{
-    background-color: red;
+    background: url("./Assets/food.jpg");
+    background-size:cover;
 }
 
 .snakeHead{
-    background-color:orange;
+    background:url("./Assets/head.jpg");
+    background-size:100px 100px;
+    background-repeat: no-repeat;
+    background-position:center;
+    /* rotate: 180deg; */
 }
 .snakeBody{
-    background-color:pink;
+    background:linear-gradient(#0b3808ba,#56df9aa3),url("./Assets/body.jpg");
+    background-size:100px 100px;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius:12px;
 }
 
 .scoreBox{

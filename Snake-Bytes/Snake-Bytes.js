@@ -80,6 +80,15 @@ function gameEngine(){
         snakeElement.style.gridColumnStart=e.x;
         if(index===0){
             snakeElement.classList.add('snakeHead');
+            if (inputDir.x === 1 && inputDir.y === 0) {
+                snakeElement.style.transform = "rotate(270deg)"; 
+            } else if (inputDir.x === -1 && inputDir.y === 0) {
+                snakeElement.style.transform = "rotate(90deg)"; 
+            } else if (inputDir.x === 0 && inputDir.y === 1) {
+                snakeElement.style.transform = "rotate(0deg)"; 
+            } else if (inputDir.x === 0 && inputDir.y === -1) {
+                snakeElement.style.transform = "rotate(180deg)"; 
+            }
         }
         else{
             snakeElement.classList.add('snakeBody');
