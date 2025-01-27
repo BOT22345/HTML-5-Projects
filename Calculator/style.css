@@ -1,0 +1,32 @@
+.mainContainer{
+    height:40vh;
+    width:15vw;
+    border:2px solid black;
+    position:relative;
+    left:40vw;
+    top:20vh;
+}
+
+#inputContainer{
+    width:10vw;
+    position: relative;
+    left:2vw;
+    top:1vh;
+    border-radius: 20%;
+}
+
+.buttonContainer{
+    position: relative;
+    top:2vh;
+    left:1.5vw;
+}
+
+.button{
+    width:30px;
+    height:30px;
+    border-radius: 20%;
+    position: relative;
+    margin-top:10px;
+    margin-left:5px;
+    margin-bottom: 5px;
+}
