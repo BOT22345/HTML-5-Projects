@@ -7,4 +7,16 @@ step 6: now set the css for main container make it in center
 step 7: now set the css for gameboard display as grid, having template columns as repeat(3,100px) and same for rows so we have 3X3 grid 
 step 8: now set the css for cell class which is gonna change the css for each cell 
 step 9: now set the css for game turn status p tag and reset button 
-step 10: 
+step 10: now in js file create 6 variables 
+          1. cells: having all the cells of html
+          2. statusText: pointing to status paragraph tag in html
+          3. resetButton: pointing to reset button in html
+          4. currentPlayer: will show the turn of the player 
+          5. gameBoard: an empty array of 9 elements to store value each cell 
+          6. winPatter: a 2d array having 8 combination of winning pattern 
+step 11: now create a handleClick foreach loop to handle click event and inside it create an event listener for each element 
+          cells.forEach((cell,index)=>{
+            cell.addEventListener("click",()=>{
+            })
+          })
+step 12: 
