@@ -1,0 +1,4 @@
+step 1: first create basic structure of html css and js 
+step 2: now create a main div and inside that div create 2 div with class gameboard and gamescore
+step 3: now, create 9 divs inside the gameboard each representing a unique cell 
+step 4: now in the gamescore div create a p tag showing status of turn and button to reset the game 
