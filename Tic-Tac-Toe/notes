@@ -19,4 +19,9 @@ step 11: now create a handleClick foreach loop to handle click event and inside 
             cell.addEventListener("click",()=>{
             })
           })
-step 12: 
+step 12: now start an if conidtion in which we check if the cell is empty and there is no already winner present 
+          if (gameBoard[index] === "" && !checkWinner()){}
+step 13: now set the currentPlayer symbol in particualar index on gameboard first then on actual html 
+          gameBoard[index]=currentPlayer; this will set in js from checking winner
+          cell.innerHTML=currentPlayer; this will set in actuall dom
+step 14: 
