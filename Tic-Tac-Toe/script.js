@@ -38,3 +38,11 @@ function checkWinner(){
     }
     )
 }
+
+//game reset functionality 
+resetButton.addEventListener('click',()=>{
+    gameBoard=["","","","","","","","",""];
+    cells.forEach(cell=>{cell.innerHTML=""});
+    currentPlayer="X";
+    statusText.innerHTML="Player X's turn";
+})

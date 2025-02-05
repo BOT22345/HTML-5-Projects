@@ -51,7 +51,13 @@ step 18: here first we assign the pattern to const [a,b,c] array
           )
 
 step 19: now we will return the function if the gameBoard[a] position has some element and other positions are equal 
-    return(gameBoard[a] && gameBoard[a]===gameBoard[b] && gameBoard[a]===gameBoard[c]); here it will check if 0,1,2 have all values equal then 3,4,5 and so on till at least one of them returns true due to .some function 
+          return(gameBoard[a] && gameBoard[a]===gameBoard[b] && gameBoard[a]===gameBoard[c]); here it will check if 0,1,2 have all values equal then 3,4,5 and so on till at least one of them returns true due to .some function 
 
-step 20: now for the reset button, 
+step 20: now for the reset button, add an click event listner on resetButton and inside it reset gameBoard array to empty make each cell ="" reset current player to "X" and also change the statusText 
+          resetButton.addEventListener('click',()=>{
+            gameBoard=["","","","","","","","",""];
+            cells.forEach(cell=>{cell.innerHTML=""});
+            currentPlayer="X";
+            statusText.innerHTML="Player X's turn";
+          })
     
