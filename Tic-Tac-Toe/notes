@@ -24,4 +24,34 @@ step 12: now start an if conidtion in which we check if the cell is empty and th
 step 13: now set the currentPlayer symbol in particualar index on gameboard first then on actual html 
           gameBoard[index]=currentPlayer; this will set in js from checking winner
           cell.innerHTML=currentPlayer; this will set in actuall dom
-step 14: 
+step 14: now create an if condition inside the main if and checkWinner if exist change the statusText.innerHTML
+          if(checkWinner()){
+            statusText.innerHTML=`Player ${currentPlayer} Wins`;
+          }
+step 15: now using .every function (which iterates over all element or cell and returns true if each cell returns true else returns false) to iterate over all the element and check the condition for draw. we check if all cells are filled means all the cells are not equal to "" or empty 
+          else if (gameBoard.every(cell => cell!== "")){
+            statusText.innerHTML="It's a draw";
+          }
+
+step 16: and in the else block we will just change the value of currentPlayer and also the status text 
+          else{
+            currentPlayer=currentPlayer==="X" ?"O":"X";
+            statusText.innerHTML=`Player ${currentPlayer} Turn`;
+          }
+step 17: now we will create a function for checkWinenr which will use .some to check if even one pattern matches with the element 
+          function checkWinner(){
+            return winPatterns.some(
+          
+            )
+          }
+
+step 18: here first we assign the pattern to const [a,b,c] array
+          return winPatterns.some(
+            pattern =>const [a,b,c]=pattern;
+          )
+
+step 19: now we will return the function if the gameBoard[a] position has some element and other positions are equal 
+    return(gameBoard[a] && gameBoard[a]===gameBoard[b] && gameBoard[a]===gameBoard[c]); here it will check if 0,1,2 have all values equal then 3,4,5 and so on till at least one of them returns true due to .some function 
+
+step 20: now for the reset button, 
+    
