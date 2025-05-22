@@ -1,32 +1,28 @@
-.mainContainer{
-    height:40vh;
-    width:15vw;
-    border:2px solid black;
-    position:relative;
-    left:40vw;
-    top:20vh;
+.mainContainer {
+    width: 90vw;
+    max-width: 320px;
+    border: 2px solid black;
+    margin: 10vh auto;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
-#inputContainer{
-    width:10vw;
-    position: relative;
-    left:2vw;
-    top:1vh;
+#inputContainer {
+    width: 100%;
+    height: 40px;
     border-radius: 20%;
+    margin-bottom: 1rem;
 }
 
-.buttonContainer{
-    position: relative;
-    top:2vh;
-    left:1.5vw;
+.buttonContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ensures 4 buttons per row */
+    gap: 10px;
 }
 
-.button{
-    width:30px;
-    height:30px;
+.button {
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 20%;
-    position: relative;
-    margin-top:10px;
-    margin-left:5px;
-    margin-bottom: 5px;
+    font-size: 1rem;
 }
